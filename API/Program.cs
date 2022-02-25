@@ -18,7 +18,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddPooledDbContextFactory<AppDbCtx>(opt => opt.UseSqlServer(configuration.GetConnectionString("dbconn")));
 // Uncomment only when seeding the database for the first time
-//builder.Services.AddDbContext<AppDbCtx>(opt => opt.UseSqlServer(configuration.GetConnectionString("dbconn")));
+builder.Services.AddDbContext<AppDbCtx>(opt => opt.UseSqlServer(configuration.GetConnectionString("dbconn")));
 
 builder.Services
     .AddGraphQLServer()
@@ -45,6 +45,6 @@ app.UseGraphQLVoyager(
 );
 
 // Uncomment only when seeding the database for the first time
-//PrepDb.PopulateDb(app);
+PrepDb.PopulateDb(app);
 
 app.Run();
