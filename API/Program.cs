@@ -17,6 +17,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddPooledDbContextFactory<AppDbCtx>(opt => opt.UseSqlServer(configuration.GetConnectionString("dbconn")));
+// Uncomment only when seeding the database for the first time
+//builder.Services.AddDbContext<AppDbCtx>(opt => opt.UseSqlServer(configuration.GetConnectionString("dbconn")));
 
 builder.Services
     .AddGraphQLServer()
@@ -41,5 +43,8 @@ app.UseGraphQLVoyager(
     new VoyagerOptions() { GraphQLEndPoint = "/graphql" },
     "/graphql-voyager"
 );
+
+// Uncomment only when seeding the database for the first time
+//PrepDb.PopulateDb(app);
 
 app.Run();

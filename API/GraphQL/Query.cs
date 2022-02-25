@@ -13,5 +13,11 @@
         {
             return ctx.Orders;
         }
+
+        [UseDbContext(typeof(AppDbCtx))]
+        public IQueryable<Car> GetCars([ScopedService] AppDbCtx ctx)
+        {
+            return ctx.Cars;
+        }
     }
 }

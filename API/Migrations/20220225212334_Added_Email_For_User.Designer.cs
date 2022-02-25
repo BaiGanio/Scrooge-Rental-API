@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace API.Migrations
 {
     [DbContext(typeof(AppDbCtx))]
-    [Migration("20220225201150_ImplementedCar2")]
-    partial class ImplementedCar2
+    [Migration("20220225212334_Added_Email_For_User")]
+    partial class Added_Email_For_User
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -30,15 +30,17 @@ namespace API.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("FuelType")
-                        .HasColumnType("int");
+                    b.Property<string>("FuelType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ImageUrl")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Maker")
-                        .HasColumnType("int");
+                    b.Property<string>("Maker")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Model")
                         .IsRequired()
@@ -86,6 +88,10 @@ namespace API.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("FirstName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -102,7 +108,7 @@ namespace API.Migrations
             modelBuilder.Entity("API.Order", b =>
                 {
                     b.HasOne("API.Car", "Car")
-                        .WithMany()
+                        .WithMany("Orders")
                         .HasForeignKey("CarId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -116,6 +122,11 @@ namespace API.Migrations
                     b.Navigation("Car");
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("API.Car", b =>
+                {
+                    b.Navigation("Orders");
                 });
 
             modelBuilder.Entity("API.User", b =>

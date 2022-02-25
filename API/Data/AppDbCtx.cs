@@ -4,10 +4,7 @@ namespace API
 {
     public class AppDbCtx : DbContext
     {
-        public AppDbCtx(DbContextOptions<AppDbCtx> options) : base(options)
-        {
-
-        }
+        public AppDbCtx(DbContextOptions<AppDbCtx> options) : base(options) { }
 
         public DbSet<User> Users { get; set; }
         public DbSet<Order> Orders { get; set; }
@@ -28,12 +25,18 @@ namespace API
                 .HasForeignKey(u => u.UserId);
 
             modelBuilder
-              .Entity<Order>()
-              .HasOne(o => o.Car);
+               .Entity<Order>()
+               .HasOne(o => o.Car)
+               .WithMany(c => c.Orders)
+               .HasForeignKey(c => c.CarId);
 
+            modelBuilder
+             .Entity<Car>()
+             .HasMany(car => car.Orders)
+             .WithOne(order => order.Car)
+             .HasForeignKey(order => order.CarId);
 
             base.OnModelCreating(modelBuilder);
         }
-
     }
 }
