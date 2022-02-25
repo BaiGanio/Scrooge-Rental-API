@@ -1,6 +1,6 @@
 ﻿namespace API
 {
-    public class Car
+    public class AppDbCtx
     {
     }
 }
