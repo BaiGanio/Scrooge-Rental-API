@@ -8,7 +8,7 @@ GraphQL Voyager: https://scrooge-rental-api.azurewebsites.net/graphql-voyager/
 ***
 # Getting Started (local setup)
 ---
-   - Navigate to ... folder and run 
+   - Navigate to `API` folder and run 
    ```
    dotnet build
    ```
