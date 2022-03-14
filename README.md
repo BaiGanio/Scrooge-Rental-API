@@ -5,7 +5,19 @@ Banana Cake Pop: https://scrooge-rental-api.azurewebsites.net/graphql/
 
 GraphQL Voyager: https://scrooge-rental-api.azurewebsites.net/graphql-voyager/
 
-
+***
+# Getting Started (local setup)
+---
+   - Navigate to ... folder and run 
+   ```
+   dotnet build
+   ```
+   - If all is fine, run:
+   ```
+   dotnet run
+   ```
+   
+---
 
 
 
