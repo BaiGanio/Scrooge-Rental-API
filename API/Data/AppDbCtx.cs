@@ -16,25 +16,25 @@ namespace API
                 .Entity<User>()
                 .HasMany(u => u.Orders)
                 .WithOne(o => o.User)
-                .HasForeignKey(o => o.UserId);
+                .OnDelete(DeleteBehavior.Cascade);
 
-            modelBuilder
-                .Entity<Order>()
-                .HasOne(o => o.User)
-                .WithMany(u => u.Orders)
-                .HasForeignKey(u => u.UserId);
+            //modelBuilder
+            //    .Entity<Order>()
+            //    .HasOne(o => o.User)
+            //    .WithMany(u => u.Orders)
+            //    .HasForeignKey(u => u.UserId);
 
-            modelBuilder
-               .Entity<Order>()
-               .HasOne(o => o.Car)
-               .WithMany(c => c.Orders)
-               .HasForeignKey(c => c.CarId);
+            //modelBuilder
+            //   .Entity<Order>()
+            //   .HasOne(o => o.Car)
+            //   .WithMany(c => c.Orders)
+            //   .HasForeignKey(c => c.CarId);
 
             modelBuilder
              .Entity<Car>()
              .HasMany(car => car.Orders)
              .WithOne(order => order.Car)
-             .HasForeignKey(order => order.CarId);
+            .OnDelete(DeleteBehavior.Cascade);
 
             base.OnModelCreating(modelBuilder);
         }

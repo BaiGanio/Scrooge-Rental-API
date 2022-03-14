@@ -20,22 +20,11 @@ builder.Services.AddPooledDbContextFactory<AppDbCtx>(opt => opt.UseSqlServer(con
 // Uncomment only when seeding the database for the first time
 //builder.Services.AddDbContext<AppDbCtx>(opt => opt.UseSqlServer(configuration.GetConnectionString("dbconn")));
 
+builder.Services.AddLogging();
 builder.Services
     .AddGraphQLServer()
-    .AddQueryType<Query>();
-
-builder.Services.AddCors(options =>
-    {
-        options.AddDefaultPolicy(
-            builder =>
-            {
-                builder
-                .AllowAnyOrigin()
-                .AllowAnyMethod()
-                .AllowAnyHeader();
-                            //.WithOrigins("https://localhost:44330", "https://baiganio.github.io/js4b");
-            });
-    });
+    .AddQueryType<Query>()
+    .AddProjections();
 
 var app = builder.Build();
 
@@ -57,7 +46,6 @@ app.UseGraphQLVoyager(
     "/graphql-voyager"
 );
 
-app.UseCors();
 // Uncomment only when seeding the database for the first time
 //PrepDb.PopulateDb(app);
 
