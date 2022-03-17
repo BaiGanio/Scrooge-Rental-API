@@ -29,6 +29,9 @@
 ***
 # `Getting Started (local setup)`
 ---
+- Should have:
+  * _[Visual Studio](https://visualstudio.microsoft.com/downloads/)_ `optional`  
+  * _[.NET 6](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)_
 - Navigate to `API -> appsentings.json` & update `dbconn` by your own preference
 - Navigate to `API -> Properties -> launchSentings.json` & update `sslPort` to be `44381`
 - Upon `API` folder run:
