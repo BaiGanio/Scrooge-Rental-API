@@ -5,12 +5,21 @@ Banana Cake Pop: https://scrooge-rental-api.azurewebsites.net/graphql/
 GraphQL Voyager: <a href="https://scrooge-rental-api.azurewebsites.net/graphql-voyager/" target="_blank">https://scrooge-rental-api.azurewebsites.net/graphql-voyager/</a>
 ***
 # The Big Picture
-- The user via Scrooge Rental Web application requests a `rent a car order`
-- Since Scrooge Rental API doesn't have email service it should rely on external one to send a `rent a car order confirmation email`.
-- `Email service` is notifyed via Azure Service Bus
-- The user should receive actual email with data provided by Scrooge Rental Web
-- Sent `rent a car order confirmation email` details are returned back to a message queue
-- Azure function writes the email data from the queue in the database used by the originator of the event
+- The user `John Doe` wants to rent a car for the weekend via Scrooge Rental Web application. Steps allowed:
+  - get all cars available for renting
+  - get all self created rent-orders
+  - create a `rent a car order`
+- Scrooge Rental API doesn't have own email service & should rely on external one. Steps allowed: 
+  - add `rent a car order` details in own database
+  - send a `rent a car order confirmation email` event to a Azure Service Bus mesage queue
+- Email service is notifyed via Azure Service Bus. Steps allowed:
+  - bake the email template upon received data
+  - send email to the user `John Doe`
+  - send a `rent a car order confirmation email sent` details are returned back to Azure Service Bus
+- The user `John Doe` should receive actual email by that time
+- Azure function is triggered. Steps allowed:
+  - receives `rent a car order confirmation email sent` details returned back in the Azure Service Bus message queue
+  - writes the data in the database used by the originator of the event
 
 <a href="https://raw.githubusercontent.com/BaiGanio/scrooge-rental-api/master/Docs/scrooge_rental_microservices.png" target="_blank">
     <img src="https://raw.githubusercontent.com/BaiGanio/scrooge-rental-api/master/Docs/scrooge_rental_microservices.png" width="100%" alt="scrooge-rental"/>
