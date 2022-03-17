@@ -37,14 +37,28 @@
   - `PrepDb.PopulateDb(app);`
   - also can change the pre-populated collections in `PrepDb.cs` by own preferences
 - Try it out at local env
-  - Banana Cake Pop: https://scrooge-rental-api.azurewebsites.net/graphql/
-  - GraphQL Voyager: <a href="https://scrooge-rental-api.azurewebsites.net/graphql-voyager/" target="_blank">https://scrooge-rental-api.azurewebsites.net/graphql-voyager/</a> 
+  - GraphQL Voyager: <a href="https://localhost:44381/graphql-voyager/" target="_blank">https://localhost:44381/graphql-voyager/</a> 
+  - Open Banana Cake Pop at https://localhost:44381/graphql/ & execute the following query:
+  ```
+  query{
+    cars{
+      id
+      maker
+      maker
+      year
+      fuelType
+      imageUrl
+    }
+  }
+  ```
 ***
 # Qurious of live demo?
-- Banana Cake Pop: https://scrooge-rental-api.azurewebsites.net/graphql/
 - GraphQL Voyager: <a href="https://scrooge-rental-api.azurewebsites.net/graphql-voyager/" target="_blank">https://scrooge-rental-api.azurewebsites.net/graphql-voyager/</a>
-- Use the queries from the `Getting Started (local setup)` section
-- Use real email if you want to receive example email
+- Open Banana Cake Pop at https://scrooge-rental-api.azurewebsites.net/graphql/ & execute the following mutation:
+  ```
+  TODO: add mutation here
+  ```
+- Use real email if you want to receive the actual email
 - Use `Scrooge Rental` web application keeping in mind the rules for using real email if intrested of the email template. Can change the name either for fun ;)
 ***
 # How to?
