@@ -1,6 +1,7 @@
-- ### _Scrooge Rental API is Azure Cloud hosted .NET 6 application supporting GraphQL_
-- ### _Using free SQL Server from AppHarbor_
-- ### _To sparkle the idea basic demo of Azure Service Bus & Azure Function is included in this example_
+- _Scrooge Rental API is Azure Cloud hosted .NET 6 application supporting GraphQL_
+- _Using free SQL Server from AppHarbor_
+- _To sparkle the idea basic demo of Azure Service Bus & Azure Function is included in this example_
+- _Check out our <a href="https://github.com/BaiGanio/scrooge-rental-api/wiki" target="_blank">Wiki</a> for more in depth explanations ;)_
 
 ***
 # `The Big Picture`
@@ -60,10 +61,6 @@
   ```
 - Use real email if you want to receive the actual email
 - Use `Scrooge Rental` web application keeping in mind the rules for using real email if intrested of the email template. Can change the name either for fun ;)
-***
-# `How to?`
-- Set up Azure Service Bus (<a href="https://github.com/BaiGanio/scrooge-rental-api/wiki/Set-up-Azure-Service-Bus" target="_blank">wiki tutorial</a>)
-- Trigger Azure Function (<a href="https://github.com/BaiGanio/scrooge-rental-api/wiki/Trigger-Azure-Function-via-Azure-Service-Bus" target="_blank">wiki tutorial</a>)
 ***
 
 
