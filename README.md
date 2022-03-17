@@ -15,7 +15,7 @@ GraphQL Voyager: <a href="https://scrooge-rental-api.azurewebsites.net/graphql-v
 - Email service is notifyed via Azure Service Bus. Steps allowed:
   - bake the email template upon received data
   - send email to the user `John Doe`
-  - send a `rent a car order confirmation email sent` details are returned back to Azure Service Bus
+  - `rent a car order confirmation email sent` details are returned back to Azure Service Bus message queue
 - The user `John Doe` should receive actual email by that time
 - Azure function is triggered. Steps allowed:
   - receives `rent a car order confirmation email sent` details returned back in the Azure Service Bus message queue
