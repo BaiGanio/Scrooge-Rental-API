@@ -24,26 +24,32 @@
 </a>
 
 ***
-# Try it out
-
-
-Banana Cake Pop: https://scrooge-rental-api.azurewebsites.net/graphql/
-
-GraphQL Voyager: <a href="https://scrooge-rental-api.azurewebsites.net/graphql-voyager/" target="_blank">https://scrooge-rental-api.azurewebsites.net/graphql-voyager/</a>
-
-***
 # Getting Started (local setup)
 ---
-   - Navigate to `API` folder and run 
-   ```
-   dotnet build
-   ```
-   - If all is fine, run:
-   ```
-   dotnet run
-   ```
-   
----
+- Navigate to `API -> appsentings.json` & update `dbconn` by your own preference
+- Navigate to `API -> Properties -> launchSentings.json` & update `sslPort` to be `44381`
+- Upon `API` folder run:
+  - `update-database` - this will create the db schema
+  - then `dotnet build`
+  - if all goes fine then execute `dotnet run`
+- Seeding & manipulating initial data is achieved by uncommented two lines in `Program.cs`
+  - `builder.Services.AddDbContext<AppDbCtx>(opt => opt.UseSqlServer(configuration.GetConnectionString("dbconn")));`
+  - `PrepDb.PopulateDb(app);`
+  - also can change the pre-populated collections in `PrepDb.cs` by own preferences
+- Try it out at local env
+  - Banana Cake Pop: https://scrooge-rental-api.azurewebsites.net/graphql/
+  - GraphQL Voyager: <a href="https://scrooge-rental-api.azurewebsites.net/graphql-voyager/" target="_blank">https://scrooge-rental-api.azurewebsites.net/graphql-voyager/</a> 
+***
+# Qurious of live demo?
+- Banana Cake Pop: https://scrooge-rental-api.azurewebsites.net/graphql/
+- GraphQL Voyager: <a href="https://scrooge-rental-api.azurewebsites.net/graphql-voyager/" target="_blank">https://scrooge-rental-api.azurewebsites.net/graphql-voyager/</a>
+- Use the queries from the `Getting Started (local setup)` section
+- Use real email if you want to receive example email
+***
+# How to?
+- Include Azure Service Bus (tutorial)
+- Trigger Azure Function (tutorial)
+***
 
 
 
