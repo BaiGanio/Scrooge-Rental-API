@@ -2,7 +2,7 @@
 
 Banana Cake Pop: https://scrooge-rental-api.azurewebsites.net/graphql/
 
-GraphQL Voyager: <a href="https://scrooge-rental-api.azurewebsites.net/graphql-voyager/" target="_blank"></a>
+GraphQL Voyager: <a href="https://scrooge-rental-api.azurewebsites.net/graphql-voyager/" target="_blank">https://scrooge-rental-api.azurewebsites.net/graphql-voyager/</a>
 ***
 # The Big Picture
 - The user via Scrooge Rental Web application requests a `rent a car order`
