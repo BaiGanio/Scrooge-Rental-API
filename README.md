@@ -2,7 +2,7 @@
 
 Banana Cake Pop: https://scrooge-rental-api.azurewebsites.net/graphql/
 
-GraphQL Voyager: https://scrooge-rental-api.azurewebsites.net/graphql-voyager/
+GraphQL Voyager: <a href="https://scrooge-rental-api.azurewebsites.net/graphql-voyager/" target="_blank"></a>
 ***
 # The Big Picture
 - The user via Scrooge Rental Web application requests a `rent a car order`
@@ -12,7 +12,7 @@ GraphQL Voyager: https://scrooge-rental-api.azurewebsites.net/graphql-voyager/
 - Sent `rent a car order confirmation email` details are returned back to a message queue
 - Azure function writes the email data from the queue in the database used by the originator of the event
 
-<a href="https://raw.githubusercontent.com/BaiGanio/scrooge-rental-api/master/Docs/scrooge_rental_microservices.png" target="_blank+>
+<a href="https://raw.githubusercontent.com/BaiGanio/scrooge-rental-api/master/Docs/scrooge_rental_microservices.png" target="_blank">
     <img src="https://raw.githubusercontent.com/BaiGanio/scrooge-rental-api/master/Docs/scrooge_rental_microservices.png" width="100%" alt="scrooge-rental"/>
 </a>
 
