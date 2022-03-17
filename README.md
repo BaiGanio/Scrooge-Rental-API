@@ -1,8 +1,6 @@
-### Scrooge Rental API is Azure Cloud hosted, .NET 6 application supporting GraphQL & using free SQL Server from AppHarbor. To sparkle the idea basic example of  Azure Service Bus & Azure Function is included in the demo.
+- _Scrooge Rental API is Azure Cloud hosted, .NET 6 application supporting GraphQL & using free SQL Server from AppHarbor_
+- _To sparkle the idea basic example of  Azure Service Bus & Azure Function is included in the demo_
 
-Banana Cake Pop: https://scrooge-rental-api.azurewebsites.net/graphql/
-
-GraphQL Voyager: <a href="https://scrooge-rental-api.azurewebsites.net/graphql-voyager/" target="_blank">https://scrooge-rental-api.azurewebsites.net/graphql-voyager/</a>
 ***
 # The Big Picture
 - The user `John Doe` wants to rent a car for the weekend via Scrooge Rental Web application. Steps allowed:
@@ -24,6 +22,14 @@ GraphQL Voyager: <a href="https://scrooge-rental-api.azurewebsites.net/graphql-v
 <a href="https://raw.githubusercontent.com/BaiGanio/scrooge-rental-api/master/Docs/scrooge_rental_microservices.png" target="_blank">
     <img src="https://raw.githubusercontent.com/BaiGanio/scrooge-rental-api/master/Docs/scrooge_rental_microservices.png" width="100%" alt="scrooge-rental"/>
 </a>
+
+***
+# Try it out
+
+
+Banana Cake Pop: https://scrooge-rental-api.azurewebsites.net/graphql/
+
+GraphQL Voyager: <a href="https://scrooge-rental-api.azurewebsites.net/graphql-voyager/" target="_blank">https://scrooge-rental-api.azurewebsites.net/graphql-voyager/</a>
 
 ***
 # Getting Started (local setup)
