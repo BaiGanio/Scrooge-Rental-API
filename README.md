@@ -45,6 +45,7 @@
 - GraphQL Voyager: <a href="https://scrooge-rental-api.azurewebsites.net/graphql-voyager/" target="_blank">https://scrooge-rental-api.azurewebsites.net/graphql-voyager/</a>
 - Use the queries from the `Getting Started (local setup)` section
 - Use real email if you want to receive example email
+- Use `Scrooge Rental` web application keeping in mind the rules for using real email if intrested of the email template. Can change the name either for fun ;)
 ***
 # How to?
 - Include Azure Service Bus (tutorial)
