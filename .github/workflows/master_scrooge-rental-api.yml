@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'scrooge-rental-api'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_15E48C72B36C401B9D991D5F6112071F }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3C19F689598D409688551B3C249B425B }}
           package: .
